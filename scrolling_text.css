@@ -1,0 +1,108 @@
+.scrolling-text-left,
+.scrolling-text-right {
+    font-size: 12rem;
+    font-weight: 1000;
+    color: white;
+}
+
+article {
+    min-height: 14rem;
+    width: 5000px;
+}
+
+.scrolling-text-left {}
+
+.scrolling-text-right {}
+
+/* Don't change the below */
+/* ====================================================================== */
+
+article {
+    overflow: hidden;
+    position: relative;
+}
+
+.scrolling-text-left {
+    white-space: nowrap;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.scrolling-text-left {
+    animation: mymove 60s linear infinite alternate;
+    -webkit-animation: mymove 60s linear infinite;
+    white-space: nowrap;
+}
+
+.scrolling-text-right {
+    white-space: nowrap;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.scrolling-text-right {
+    animation: urmove 60s linear infinite alternate;
+    -webkit-animation: urmove 60s linear infinite;
+    white-space: nowrap;
+}
+
+@-webkit-keyframes mymove {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -5000px;
+    }
+}
+
+@keyframes mymove {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -5000px;
+    }
+}
+
+@-webkit-keyframes urmove {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: -5000px;
+    }
+}
+
+@keyframes urmove {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: -5000px;
+    }
+}
+
+@keyframes early {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.early {
+    animation: fadeIn ease-in 1;
+    /* call our keyframe named fadeIn, use animation ease-in and repeat it only 1 time */
+
+    animation-fill-mode: forwards;
+    /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+}
