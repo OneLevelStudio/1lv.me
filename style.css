@@ -7,6 +7,17 @@
 }
 
 
+.scrolling-wrap {
+    height: calc(100vh - 200px);
+}
+
+@media only screen and (max-width: 1000px) {
+    .scrolling-wrap {
+        height: calc(80vh - 200px);
+    }
+}
+
+
 .mockup-wrap {
     position: relative;
     width: var(--mockup-img-size);
