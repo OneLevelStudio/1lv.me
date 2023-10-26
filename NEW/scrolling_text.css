@@ -1,3 +1,7 @@
+:root {
+    --time: 80s;
+}
+
 .scrolling-text-left,
 .scrolling-text-right {
     font-size: 12rem;
@@ -5,9 +9,25 @@
     color: white;
 }
 
+
 article {
     min-height: 14rem;
     width: 5000px;
+}
+
+@media only screen and (max-width: 1000px) {
+    :root {
+        --time: 100s;
+    }
+
+    .scrolling-text-left,
+    .scrolling-text-right {
+        font-size: 6rem;
+    }
+
+    article {
+        min-height: 7rem;
+    }
 }
 
 .scrolling-text-left {}
@@ -29,8 +49,8 @@ article {
 }
 
 .scrolling-text-left {
-    animation: mymove 60s linear infinite alternate;
-    -webkit-animation: mymove 60s linear infinite;
+    animation: mymove var(--time) linear infinite alternate;
+    -webkit-animation: mymove var(--time) linear infinite;
     white-space: nowrap;
 }
 
@@ -41,8 +61,8 @@ article {
 }
 
 .scrolling-text-right {
-    animation: urmove 60s linear infinite alternate;
-    -webkit-animation: urmove 60s linear infinite;
+    animation: urmove var(--time) linear infinite alternate;
+    -webkit-animation: urmove var(--time) linear infinite;
     white-space: nowrap;
 }
 
